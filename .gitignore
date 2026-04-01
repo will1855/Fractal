@@ -6,7 +6,6 @@ __pycache__/
 out_*/
 
 # Generated files
-*.png
 *.csv
 
 # OS files
