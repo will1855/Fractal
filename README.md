@@ -6,6 +6,29 @@ This project forms part of my final-year Computer Science dissertation, investig
 
 ---
 
+## Example Outputs
+
+### Fractal Tree
+![Tree](images/tree_example.png)
+
+### Lightning (DBM)
+![Lightning](images/lightning_example.png)
+
+### Lévy vs Brownian Walk
+![Levy vs Brownian](images/levy_vs_brownian.png)
+
+---
+
+## Quick Start
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
 ## Models
 
 ### Fractal Tree Model
@@ -54,3 +77,20 @@ Each model includes a reproducible evaluation pipeline:
 python eval_tree_pipeline.py --n 30 --seed0 7 --out out_tree_eval
 python eval_lightning_pipeline.py --n 30 --seed0 7 --out out_lightning_eval
 python eval_levy_pipeline.py --n 30 --seed0 7 --out out_levy_eval
+```
+
+---
+
+## Analysis Outputs
+
+The evaluation pipelines generate quantitative outputs including:
+
+- Fractal dimension (box-counting)
+- Branching statistics (trees, lightning)
+- Model comparison (power-law vs exponential)
+- Search efficiency (Lévy vs Brownian)
+
+Example analysis outputs:
+
+![Levy Efficiency](images/levy_efficiency.png)
+![Box Counting](images/tree_boxcount.png)
