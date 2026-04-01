@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Output folders
+out_*/
+
+# Generated files
+*.png
+*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
