@@ -69,7 +69,7 @@ class Params:
     # Initial module sizes
     l0: float = 1.0
     w0: float = 1.0
-    d_max: int = 8
+    d_max: int = 9
 
     # Length scaling
     ra: float = 0.84   # apical continuation shrink
@@ -80,7 +80,7 @@ class Params:
     rwb: float = 0.74
 
     # Branch pitch angles
-    phi_a_deg: float = 28.0   # trunk - lateral pitch away from axis
+    phi_a_deg: float = 30.0   # trunk - lateral pitch away from axis
     phi_b_deg: float = 22.0   # branch - sub-branch pitch
 
     # Small yaw bending for continuation
