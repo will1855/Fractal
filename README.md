@@ -90,7 +90,33 @@ The evaluation pipelines generate quantitative outputs including:
 - Model comparison (power-law vs exponential)
 - Search efficiency (Lévy vs Brownian)
 
-Example analysis outputs:
+---
 
-![Levy Efficiency](images/levy_efficiency.png)
-![Box Counting](images/tree_boxcount.png)
+## Real Image Sanity Check
+
+For the lightning model, a standalone tool is provided to compare real photographs against the model's fractal dimension. 
+
+### Usage:
+
+```bash
+python eval_real_lightning_image.py --image path/to/photo.jpg --out out_real_lightning --thresholds 160 180 200
+```
+
+#### Directory Mode:
+```bash
+python eval_real_lightning_image.py --image_dir path/to/crops --out out_real_all --thresholds 160 180 200
+```
+
+### Features:
+- **Batch Processing**: Process a single image or an entire folder of photographs.
+- **Organizational Structure**: Saves per-image masks and diagnostic plots in dedicated subfolders.
+- **Threshold Sensitivity**: Measures fractal dimension across multiple brightness thresholds to ensure stability.
+- **Model Comparison**: Automatically compares real lightning $D$ values against the generated model's reference range (mean=1.34).
+- **Aggregate Metrics**: Generates a `combined_real_lightning_metrics.csv` and `summary_stats.csv`.
+- **Comparative Plots**: 
+  - `D_histogram.png`: Distribution of $D$ across the real dataset.
+  - `D_vs_generated_model_comparison.png`: Visual comparison against the DBM model.
+  - `D_by_image_threshold.png`: Multi-image sensitivity analysis.
+
+> [!NOTE]
+> This is intended as a limited sanity check for the fractal dimension $D$, not a full structural validation.
